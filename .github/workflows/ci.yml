@@ -127,4 +127,4 @@ jobs:
         working-directory: ansible
         run: ansible-playbook site.yml -e "app_tag=$GITHUB_SHA"
       - name: Check through Nginx
-        run: curl --fail --silent --show-error --max-time 15 "http://$VM_HOST/healthz"
+        run: curl --fail --silent --show-error --max-time 15 "http://$VM_HOST/health"
